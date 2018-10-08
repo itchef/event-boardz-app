@@ -1,27 +1,34 @@
-# EventBoardzApp
+# Event Boardz App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.4.
+This is the front end application of event boardz. You need to start API to run Event Boardz application properly.
 
-## Development server
+## Prerequisites
+* Git - 2.17
+* Angular CLI - 6.2.4
+* NodeJS - 9.11.1
+* Yarn - 1.10.1
+* Chrome Browser
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Development
 
-## Code scaffolding
+Want to contribute? Great!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Setup Dependencies
+1. Setup Event Boardz API and start the server
+2. On the project root directory, run the followings,
+```
+git clone https://github.com/itchef/event-boardz-app.git
+cd event-boardz-app
+yarn install
+yarn start
+```
+It will build event-boardz-app and run it on http://localhost:4200
 
-## Build
+### Other useful commands
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+| Command | Description |
+| ------ | ------ |
+| yarn build | Build the application. You can find the built project under dist/ folder. |
+| yarn test | Run test cases of the project. It runs lint check before running the testcases. |
+| yarn lint | Runs project indentation or linting rules |
+| yarn e2e | Runs end to end protractor test cases. |
