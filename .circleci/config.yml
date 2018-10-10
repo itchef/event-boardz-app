@@ -2,22 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-    # specify the version you desire here
     - image: circleci/node:9.11.1
     - image: circleci/node:10-browsers
-      environment:
-        CHROME_BIN: "/usr/bin/google-chrome"
 
     working_directory: ~/event-boardz-app
 
     steps:
     - checkout
 
-    # Download and cache dependencies
     - restore_cache:
         keys:
-        - v1-dependencies-{{ checksum "package.json" }}
-        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-{{ checksum "yarn.lock" }}
         - v1-dependencies-
 
     - run: yarn install
@@ -25,11 +20,17 @@ jobs:
     - save_cache:
         paths:
         - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
+        key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-    # run tests!
+    - run:
+        name: Setting up angular cli
+        command: yarn add @angular/cli@6.2.4
+    - run:
+        name: Start xvfb
+        command: sh -e /etc/init.d/xvfb start
     - run: yarn test
     - run: yarn build
+
     - store_artifacts:
         path: dist/event-boardz-app
 
