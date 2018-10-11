@@ -23,13 +23,17 @@ jobs:
         key: v1-dependencies-{{ checksum "yarn.lock" }}
 
     - run:
-        name: Setting up angular cli
-        command: yarn add @angular/cli@6.2.4
+        name: Install XVFB
+        command: sudo yum install Xvfb
     - run:
         name: Start xvfb
         command: sh -e /etc/init.d/xvfb start
-    - run: yarn test
-    - run: yarn build
+    - run:
+        name: Run unit tests
+        command: yarn test
+    - run:
+        name: Build the project
+        command: yarn build
 
     - store_artifacts:
         path: dist/event-boardz-app
