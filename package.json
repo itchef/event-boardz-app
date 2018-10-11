@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --source-map=false --aot",
     "test": "ng lint && ng test --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
