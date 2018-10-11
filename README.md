@@ -1,4 +1,5 @@
 # Event Boardz App
+[![CircleCI](https://circleci.com/gh/itchef/event-boardz-app.svg?style=svg)](https://circleci.com/gh/itchef/event-boardz-app)
 
 This is the front end application of event boardz. You need to start API to run Event Boardz application properly.
 
