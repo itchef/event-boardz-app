@@ -1,0 +1,7 @@
+<mat-toolbar color="primary" class="eb-header-wrapper">
+  <mat-toolbar-row *ngIf="appConfig">
+    <a href="{{ appConfig.redirectUrl }}">
+      <img src="{{ appConfig.companyLogo }}" alt="{{ appConfig.name }}" class="logo-wrapper">
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>

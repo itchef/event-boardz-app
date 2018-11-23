@@ -4,7 +4,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build --source-map=false --aot",
-    "test": "ng lint && ng test --watch=false",
+    "test": "ng lint && ng test --watch=false --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -44,6 +44,7 @@
     "protractor": "5.4.1",
     "ts-node": "7.0.1",
     "tslint": "5.11.0",
-    "typescript": "3.1.6"
+    "typescript": "3.1.6",
+    "faker": "4.1.0"
   }
 }

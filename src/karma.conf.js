@@ -26,6 +26,12 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: false,
+    threshold: {
+      statements: 95,
+      lines: 95,
+      branches: 95,
+      functions: 95
+    }
   });
 };
